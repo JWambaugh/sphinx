@@ -9,7 +9,9 @@
 	<set name="BUILD_DIR" value="bin" />
 	
 	<!-- classpath, haxe libs -->
+	<classpath name="c:\firmament.hx\src" />
 	<classpath name="src" />
+	
 	<haxelib name="nme" /><haxelib name="box2d" />
 	
 	<!-- assets -->
