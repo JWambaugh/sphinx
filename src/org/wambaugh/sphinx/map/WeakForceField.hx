@@ -15,7 +15,7 @@ class WeakForceField extends BaseForceField
 		config.shapes = [
 		{
 			type:'circle'
-			,radius:.37
+			,radius:config.radius
 			,restitution:.8
 			,friction:0
 		}

@@ -42,7 +42,7 @@ class Main
 		position: new FVector(-.5,0)
 		} );
 		var weakForceField = new WeakForceField (world, {
-		position: new FVector( -.1, 0) 
+		position: new FVector( 0,.13), radius: 1
 		});
 		
 		

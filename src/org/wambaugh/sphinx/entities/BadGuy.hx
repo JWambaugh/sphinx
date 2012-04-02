@@ -14,7 +14,8 @@ class BadGuy extends FPhysicsEntity
 	
 	public function new(world:FPhysicsWorld, config:Dynamic) 
 	{
-		
+		config.collisionCategory = 2;
+		config.collidesWith = 3;
 		super(world, config);
 	}
 	public function getHealth():Int{

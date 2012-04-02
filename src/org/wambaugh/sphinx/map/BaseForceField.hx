@@ -12,7 +12,8 @@ class BaseForceField extends FPhysicsEntity
 	var resistance:Int;
 	public function new(world:FPhysicsWorld,config:Dynamic) 
 	{
-		
+		config.collisionCategory = 4;
+		config.collidesWith = 1;
 		super(world, config);
 	}
 	public function getResistance():Int {
