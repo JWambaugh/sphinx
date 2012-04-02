@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <project version="2">
   <!-- Output SWF options -->
   <output>
     <movie outputType="Application" />
     <movie input="" />
-    <movie path="application.nmml" />
+    <movie path="sphinx.nmml" />
     <movie fps="0" />
     <movie width="0" />
     <movie height="0" />
