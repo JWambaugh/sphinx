@@ -7,8 +7,10 @@ import firmament.core.FVector;
 import nme.display.StageAlign;
 import nme.display.StageScaleMode;
 import nme.Lib;
+import nme.utils.WeakRef;
 import org.wambaugh.sphinx.entities.Grunt;
 import org.wambaugh.sphinx.map.Ground;
+import org.wambaugh.sphinx.map.WeakWall;
 
 /**
  * ...
@@ -35,6 +37,10 @@ class Main
 			} );
 		var ground = new Ground(world);
 		camera.setZoom(100);
+		var weakWall = new WeakWall (world, {
+		position: new FVector(-.5,0)
+		} );
+		
 		
 	}
 	
