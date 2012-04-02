@@ -31,10 +31,10 @@ class Main
 		game.addWorld(world);
 		game.addCamera(camera);
 		var grunt = new Grunt(world, {
-			position: new FVector(3,0)
+			position: new FVector(0,0)
 			} );
 		var ground = new Ground(world);
-		
+		camera.setZoom(100);
 		
 	}
 	
