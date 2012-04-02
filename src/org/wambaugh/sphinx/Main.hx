@@ -10,6 +10,7 @@ import nme.Lib;
 import nme.utils.WeakRef;
 import org.wambaugh.sphinx.entities.Grunt;
 import org.wambaugh.sphinx.map.Ground;
+import org.wambaugh.sphinx.map.WeakForceField;
 import org.wambaugh.sphinx.map.WeakWall;
 
 /**
@@ -40,6 +41,10 @@ class Main
 		var weakWall = new WeakWall (world, {
 		position: new FVector(-.5,0)
 		} );
+		var weakForceField = new WeakForceField (world, {
+		position: new FVector( -.1, 0) 
+		});
+		
 		
 		
 	}

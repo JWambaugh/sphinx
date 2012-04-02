@@ -7,7 +7,7 @@ import firmament.core.FPhysicsWorld;
  * @author Gunnar Wambaugh
  */
 
-class BasicWall extends FPhysicsEntity 
+class BaseWall extends FPhysicsEntity 
 {
 	var strength:Int; 
 	public function new(world:FPhysicsWorld, config:Dynamic)

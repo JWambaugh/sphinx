@@ -6,24 +6,21 @@ import firmament.core.FPhysicsWorld;
  * @author Gunnar Wambaugh
  */
 
-class WeakWall extends BaseWall
+class WeakForceField extends BaseForceField
 {
-
+	
 	public function new(world:FPhysicsWorld,config:Dynamic) 
 	{
-		config.type = "dynamic";
+		config.type = "static";
 		config.shapes = [
 		{
-			type:'box'
-			,width:.07
-			,height:.7
-			,restitution:.1
-			,density:.5
-			,friction:.7
+			type:'circle'
+			,radius:.37
+			,restitution:.8
+			,friction:0
 		}
 		];
-		super (world, config);
-		strength = 100;
+		super(world,config);
 	}
 	
 }
