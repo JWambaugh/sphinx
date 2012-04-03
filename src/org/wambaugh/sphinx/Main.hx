@@ -1,6 +1,7 @@
 package org.wambaugh.sphinx;
 
 import firmament.core.FCamera;
+import firmament.core.FPhysicsEntity;
 import firmament.core.FGame;
 import firmament.core.FPhysicsWorld;
 import firmament.core.FVector;
@@ -19,7 +20,7 @@ import nme.display.Bitmap;
 import nme.text.TextField;
 import nme.events.MouseEvent;
 import nme.Assets;
-
+import nme.events.Event;
 /**
  * ...
  * @author Jordan Wambaugh
@@ -74,6 +75,16 @@ class Main
 		
 		
 		var draw = new DrawCanvas(300, 300);
+		draw.addEventListener(DrawCanvas.DONE_DRAW, function(e:Event) {
+			stage.removeChild(draw);
+			var blob = new FPhysicsEntity(world, { 
+				
+				type:'dynamic'
+				,position:new FVector( -1, -1)
+				//,sprite: draw.bitmap
+				,shapes:draw.getShapes({})
+				} );
+		});
 		stage.addChild(draw);
 						
 	}
