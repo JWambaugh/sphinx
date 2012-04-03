@@ -1,5 +1,6 @@
 package firmament.ui;
 import nme.display.Bitmap;
+import nme.display.BitmapData;
 import nme.display.Sprite;
 import nme.text.TextField;
 
@@ -12,14 +13,15 @@ class FButton extends Sprite
 {
 
 	var bitmap:Bitmap;
-	var text:TextField
-	public function new(bitmap:Bitmap,text:String = '') 
+	var text:TextField;
+	public function new(bitmapD:BitmapData,text:String = '') 
 	{
-		this.bitmap = bitmap;
+		this.bitmap = new Bitmap(bitmapD);
 		this.text = new TextField();
 		this.text.text = text;
-		this.
-		
+		this.addChild(this.bitmap);
+		this.addChild(this.text);
+		super();
 		
 	}
 	

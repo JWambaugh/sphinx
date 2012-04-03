@@ -4,10 +4,12 @@ import firmament.core.FCamera;
 import firmament.core.FGame;
 import firmament.core.FPhysicsWorld;
 import firmament.core.FVector;
+import firmament.ui.FButton;
 import nme.display.StageAlign;
 import nme.display.StageScaleMode;
 import nme.Lib;
 import nme.utils.WeakRef;
+import org.wambaugh.sphinx.draw.DrawCanvas;
 import org.wambaugh.sphinx.entities.Grunt;
 import org.wambaugh.sphinx.map.Ground;
 import org.wambaugh.sphinx.map.WeakForceField;
@@ -28,6 +30,15 @@ class Main
 	
 	static public function main() 
 	{
+		
+		
+		#if (flash9 || flash10)
+		haxe.Log.trace = function(v,?pos) { untyped __global__["trace"](pos.className+"#"+pos.methodName+"("+pos.lineNumber+"):",v); }
+		#elseif flash
+		haxe.Log.trace = function(v,?pos) { flash.Lib.trace(pos.className+"#"+pos.methodName+"("+pos.lineNumber+"): "+v); }
+		#end
+		
+		
 		var stage = Lib.current.stage;
 		stage.scaleMode = StageScaleMode.NO_SCALE;
 		stage.align = StageAlign.TOP_LEFT;
@@ -50,7 +61,7 @@ class Main
 		position: new FVector( 0,.2), radius:.35
 		});
 		
-		var playButton = new Bitmap(Assets.getBitmapData("assets/playButton.png"));
+		var playButton = new FButton(Assets.getBitmapData("assets/playButton.png"),"");
 		playButton.x = 100;
 		playButton.y = 100;
 		
@@ -60,6 +71,10 @@ class Main
 		var mainMenu = new nme.display.Sprite();
 		stage.addChild(mainMenu);
 		mainMenu.addChild(playButton);
+		
+		
+		var draw = new DrawCanvas(300, 300);
+		stage.addChild(draw);
 						
 	}
 	
