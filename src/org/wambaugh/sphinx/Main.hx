@@ -12,6 +12,11 @@ import org.wambaugh.sphinx.entities.Grunt;
 import org.wambaugh.sphinx.map.Ground;
 import org.wambaugh.sphinx.map.WeakForceField;
 import org.wambaugh.sphinx.map.WeakWall;
+import nme.display.Sprite;
+import nme.display.Bitmap;
+import nme.text.TextField;
+import nme.events.MouseEvent;
+import nme.Assets;
 
 /**
  * ...
@@ -42,11 +47,20 @@ class Main
 		position: new FVector(-.5,0)
 		} );
 		var weakForceField = new WeakForceField (world, {
-		position: new FVector( 0,.13), radius: 1
+		position: new FVector( 0,.2), radius:.35
 		});
 		
+		var playButton = new Bitmap(Assets.getBitmapData("assets/playButton.png"));
+		playButton.x = 100;
+		playButton.y = 100;
 		
-		
+		playButton.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) { 
+			trace('Clicked!'); 
+		} );
+		var mainMenu = new nme.display.Sprite();
+		stage.addChild(mainMenu);
+		mainMenu.addChild(playButton);
+						
 	}
 	
 }
