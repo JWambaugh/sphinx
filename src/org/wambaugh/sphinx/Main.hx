@@ -80,9 +80,9 @@ class Main
 			var blob = new FPhysicsEntity(world, { 
 				
 				type:'dynamic'
-				,position:new FVector( -1, -1)
+				,position:new FVector( -1, -5)
 				//,sprite: draw.bitmap
-				,shapes:draw.getShapes({})
+				,shapes:draw.getShapes({restitution:.4})
 				} );
 		});
 		stage.addChild(draw);

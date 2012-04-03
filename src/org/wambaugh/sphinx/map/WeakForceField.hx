@@ -14,7 +14,7 @@ class WeakForceField extends BaseForceField
 	{
 		config.sprite = new Bitmap(Assets.getBitmapData("assets/forceField.png"));
 		config.type = "static";
-			config.imageScale = 377;
+		config.imageScale = 377;
 		config.shapes = [
 		{
 			type:'circle'
@@ -25,6 +25,7 @@ class WeakForceField extends BaseForceField
 		}
 		];
 		super(world, config);
+		health = 100;
 		setZPosition(5);
 	}
 	

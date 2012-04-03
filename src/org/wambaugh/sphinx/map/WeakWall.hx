@@ -15,19 +15,18 @@ class WeakWall extends BaseWall
 		config.sprite = new Bitmap(Assets.getBitmapData("assets/weakWall.png"));
 		config.type = "dynamic";
 		config.imageScale = 589;
-		config.imageScale = 712;
 		config.shapes = [
 		{
 			type:'box'
 			,width:.151
 			,height:.7
 			,restitution:.1
-			,density:.5
+			,density:.7
 			,friction:.7
 		}
 		];
 		super (world, config);
-		strength = 100;
+		health = 100;
 	}
 	
 }
