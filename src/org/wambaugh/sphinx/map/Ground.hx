@@ -17,18 +17,18 @@ class Ground extends FPhysicsEntity
 		var config:Dynamic = { };
 		config.type = "static";
 		config.sprite = new Bitmap(Assets.getBitmapData("assets/sandDunes.png"));
-		config.imageScale =39;
+		config.imageScale =100;
 		config.shapes = [
 			{
 				type:'box'
-				,width:20
-				,height:4.94
+				,width:10.17
+				,height:3.12
 				,restitution:.1
 				,density:.5
 				,friction:.7
 			}
 			];
-		config.position = new FVector(0,3);
+		config.position = new FVector(0,2);
 		super(world,config);
 	}
 	

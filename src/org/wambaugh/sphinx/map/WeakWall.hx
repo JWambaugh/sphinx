@@ -14,7 +14,8 @@ class WeakWall extends BaseWall
 	{
 		config.sprite = new Bitmap(Assets.getBitmapData("assets/weakWall.png"));
 		config.type = "dynamic";
-		config.imageScale =589;
+		config.imageScale = 589;
+		config.imageScale = 712;
 		config.shapes = [
 		{
 			type:'box'
