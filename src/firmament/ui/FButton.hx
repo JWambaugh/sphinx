@@ -18,7 +18,7 @@ class FButton extends Sprite
 		this.bitmap = bitmap;
 		this.text = new TextField();
 		this.text.text = text;
-		this.
+		this.addChild(bitmap);
 		
 		
 	}
