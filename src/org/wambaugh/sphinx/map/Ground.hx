@@ -16,7 +16,7 @@ class Ground extends FPhysicsEntity
 	{
 		var config:Dynamic = { };
 		config.type = "static";
-		config.sprite = new Bitmap(Assets.getBitmapData("assets/sandDunes.png"));
+		config.sprite = Assets.getBitmapData("assets/sandDunes.png");
 		config.imageScale =100;
 		config.shapes = [
 			{

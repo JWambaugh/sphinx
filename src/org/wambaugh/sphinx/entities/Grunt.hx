@@ -12,7 +12,7 @@ class Grunt extends BadGuy
 
 	public function new(world:FPhysicsWorld,config:Dynamic) 
 	{
-		config.sprite = new Bitmap(Assets.getBitmapData("assets/alien.png"));
+		config.sprite = Assets.getBitmapData("assets/alien.png");
 		config.type = "dynamic";
 		config.imageScale = 712;
 		config.shapes = [

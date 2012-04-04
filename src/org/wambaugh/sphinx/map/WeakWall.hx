@@ -15,7 +15,7 @@ class WeakWall extends BaseWall
 
 	public function new(world:FPhysicsWorld,config:Dynamic) 
 	{
-		config.sprite = new Bitmap(Assets.getBitmapData("assets/weakWall.png"));
+		config.sprite =Assets.getBitmapData("assets/weakWall.png");
 		config.type = "dynamic";
 		config.imageScale = 589;
 		config.shapes = [
@@ -35,7 +35,7 @@ class WeakWall extends BaseWall
 	override public function takeDamage() {
 		if (dead) return;
 		if (health < 50) {
-			this.currentImage.bitmapData = Assets.getBitmapData("assets/weakWallCracked.png");
+			this.currentImage = Assets.getBitmapData("assets/weakWallCracked.png");
 		}
 		var debrisArray = [
 			[.0407,.5467 ]
@@ -52,7 +52,7 @@ class WeakWall extends BaseWall
 			for (num in 1 ... 6) {
 				var ent;
 				ent = new FPhysicsEntity(cast(world),{
-					sprite:new Bitmap(Assets.getBitmapData("assets/ChardWall" + num + ".png"))
+					sprite:Assets.getBitmapData("assets/ChardWall" + num + ".png")
 					,type:"dynamic"
 					,angle: getAngle()
 					,position:this.getPosition()
