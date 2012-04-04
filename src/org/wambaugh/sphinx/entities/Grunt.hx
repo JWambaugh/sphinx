@@ -26,7 +26,24 @@ class Grunt extends BadGuy
 				}
 				];
 		super(world, config);
-		health = 100;
+		health = 1;
 	}
-	
-}
+	override public function takeDamage() {
+		if (this.health <= 0) {
+			for( count in 1 ... 8){
+				sprite:new Bitmap(Assets.getBitmapData("assets/AlienBlood.png"))
+				,type:"dynamic"
+				,position:this.getPosition()
+				,imageScale:712
+				,maxLifeSeconds:.5+ Math.random()*2
+				,shapes:[ {
+						type:'circle'
+						,radius:17
+						,restitution:.9
+						,density:.1
+						,friction:.1
+					}]
+				};
+			}
+		}
+	}

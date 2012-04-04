@@ -70,9 +70,9 @@ class Main
 		var moderateWall = new ModerateWall(world, {
 			position: new FVector(-.9,0)
 		} );
-		var weakForceField = new WeakForceField (world, {
-		position: new FVector( 0,.2), radius:.35
-		});
+		//var weakForceField = new WeakForceField (world, {
+		//position: new FVector( 0,.2), radius:.35
+		//});
 		
 		
 		var playButton = new FButton(Assets.getBitmapData("assets/playButton.png"),"");

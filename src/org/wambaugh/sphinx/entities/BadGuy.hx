@@ -19,4 +19,5 @@ class BadGuy extends DestroyableEntity
 		config.collidesWith = 11;
 		super(world, config);
 	}
-}
+	
+	}
