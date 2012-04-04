@@ -12,7 +12,7 @@ class StrongWall extends BaseWall
 
 	public function new(world:FPhysicsWorld,config:Dynamic) 
 	{
-		config.sprite = new Bitmap(Assets.getBitmapData("assets/StrongWall.png"));
+		config.sprite = Assets.getBitmapData("assets/StrongWall.png");
 		config.type = "dynamic";
 		config.imageScale = 589;
 		config.shapes = [
@@ -31,7 +31,7 @@ class StrongWall extends BaseWall
 	override public function takeDamage() {
 		if (dead) return;
 		if (health < 150) {
-			this.currentImage.bitmapData= Assets.getBitmapData("assets/StrongWallCracked.png");
+			this.currentImage= Assets.getBitmapData("assets/StrongWallCracked.png");
 		}
 	}
 }

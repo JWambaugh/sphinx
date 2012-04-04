@@ -12,7 +12,7 @@ class ModerateWall extends BaseWall
 
 	public function new(world:FPhysicsWorld,config:Dynamic) 
 	{
-		config.sprite = new Bitmap(Assets.getBitmapData("assets/ModerateWall.png"));
+		config.sprite = Assets.getBitmapData("assets/ModerateWall.png");
 		config.type = "dynamic";
 		config.imageScale = 589;
 		config.shapes = [
@@ -31,7 +31,7 @@ class ModerateWall extends BaseWall
 	override public function takeDamage() {
 		if (dead) return;
 		if (health < 100) {
-			this.currentImage.bitmapData = Assets.getBitmapData("assets/ModerateWallCracked.png");
+			this.currentImage = Assets.getBitmapData("assets/ModerateWallCracked.png");
 		}
 		
 	}
