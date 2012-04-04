@@ -2,6 +2,7 @@ package org.wambaugh.sphinx.entities;
 import firmament.core.FPhysicsWorld;
 import nme.display.Bitmap;
 import nme.Assets;
+import firmament.core.FPhysicsEntity;
 /**
  * ...
  * @author Gunnar Wambaugh
@@ -30,20 +31,22 @@ class Grunt extends BadGuy
 	}
 	override public function takeDamage() {
 		if (this.health <= 0) {
-			for( count in 1 ... 8){
-				sprite:new Bitmap(Assets.getBitmapData("assets/AlienBlood.png"))
-				,type:"dynamic"
-				,position:this.getPosition()
-				,imageScale:712
-				,maxLifeSeconds:.5+ Math.random()*2
-				,shapes:[ {
-						type:'circle'
-						,radius:17
-						,restitution:.9
-						,density:.1
-						,friction:.1
-					}]
-				};
+			for ( count in 1 ... 8) {
+				var ent = new FPhysicsEntity(cast(world),{
+					sprite: Assets.getBitmapData("assets/AlienBlood.png")
+					,type:"dynamic"
+					,position:this.getPosition()
+					,imageScale:712
+					,maxLifeSeconds:.5+ Math.random()*2
+					,shapes:[ {
+							type:'circle'
+							,radius:.03
+							,restitution:0
+							,density:.1
+							,friction:.1
+						}]
+					});
+				}
 			}
 		}
 	}
