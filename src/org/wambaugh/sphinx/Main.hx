@@ -13,6 +13,8 @@ import nme.utils.WeakRef;
 import org.wambaugh.sphinx.draw.DrawCanvas;
 import org.wambaugh.sphinx.entities.Grunt;
 import org.wambaugh.sphinx.map.Ground;
+import org.wambaugh.sphinx.map.ModerateWall;
+import org.wambaugh.sphinx.map.StrongWall;
 import org.wambaugh.sphinx.map.WeakForceField;
 import org.wambaugh.sphinx.map.WeakWall;
 import nme.display.Sprite;
@@ -50,17 +52,28 @@ class Main
 		var game = new FGame();
 		game.addWorld(world);
 		game.addCamera(camera);
+		var logo = new FButton(Assets.getBitmapData("assets/SpaceGateLogo.png"),"");
+		logo.x =400;
+		logo.y =100;
+		
 		var grunt = new Grunt(world, {
 			position: new FVector(0,0)
 			} );
 		var ground = new Ground(world);
 		camera.setZoom(100);
 		var weakWall = new WeakWall (world, {
-		position: new FVector(-.5,0)
+		position: new FVector( -.5, 0)
+		} );
+		var strongWall = new StrongWall(world, {
+			position: new FVector(-.7,0)
+		} );
+		var moderateWall = new ModerateWall(world, {
+			position: new FVector(-.9,0)
 		} );
 		var weakForceField = new WeakForceField (world, {
 		position: new FVector( 0,.2), radius:.35
 		});
+		
 		
 		var playButton = new FButton(Assets.getBitmapData("assets/playButton.png"),"");
 		playButton.x = 300;
