@@ -27,7 +27,7 @@ class Grunt extends BadGuy
 				}
 				];
 		super(world, config);
-		health = 1;
+		health = 100;
 	}
 	override public function takeDamage() {
 		if (this.health <= 0) {
@@ -35,13 +35,13 @@ class Grunt extends BadGuy
 				var ent = new FPhysicsEntity(cast(world),{
 					sprite: Assets.getBitmapData("assets/AlienBlood.png")
 					,type:"dynamic"
-					,position:this.getPosition()
+					,position:this.getPosition() 
 					,imageScale:712
 					,maxLifeSeconds:.5+ Math.random()*2
 					,shapes:[ {
 							type:'circle'
 							,radius:.03
-							,restitution:0
+							,restitution:.1
 							,density:.1
 							,friction:.1
 						}]

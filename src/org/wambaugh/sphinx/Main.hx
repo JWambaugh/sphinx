@@ -13,8 +13,10 @@ import nme.utils.WeakRef;
 import org.wambaugh.sphinx.draw.DrawCanvas;
 import org.wambaugh.sphinx.entities.Grunt;
 import org.wambaugh.sphinx.map.Ground;
+import org.wambaugh.sphinx.map.ModerateForceField;
 import org.wambaugh.sphinx.map.ModerateWall;
 import org.wambaugh.sphinx.map.StrongWall;
+import org.wambaugh.sphinx.map.StrongForceField;
 import org.wambaugh.sphinx.map.WeakForceField;
 import org.wambaugh.sphinx.map.WeakWall;
 import nme.display.Sprite;
@@ -23,6 +25,8 @@ import nme.text.TextField;
 import nme.events.MouseEvent;
 import nme.Assets;
 import nme.events.Event;
+
+
 /**
  * ...
  * @author Jordan Wambaugh
@@ -52,9 +56,15 @@ class Main
 		var game = new FGame();
 		game.addWorld(world);
 		game.addCamera(camera);
-		var logo = new FButton(Assets.getBitmapData("assets/SpaceGateLogo.png"),"");
+		var logo = new FButton(Assets.getBitmapData("assets/Background.png"),"");
 		logo.x =400;
-		logo.y =100;
+		logo.y = 100;
+		logo.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) { 
+			trace('Clicked!'); 
+		} );
+		var logo = new FButton(Assets.getBitmapData("assets/SpaceGateLogo.png"),"");
+		logo.x =0;
+		logo.y = 0;
 		
 		var grunt = new Grunt(world, {
 			position: new FVector(0,0)
@@ -70,12 +80,12 @@ class Main
 		var moderateWall = new ModerateWall(world, {
 			position: new FVector(-.9,0)
 		} );
-		//var weakForceField = new WeakForceField (world, {
-		//position: new FVector( 0,.2), radius:.35
-		//});
+		var moderateForceField = new ModerateForceField (world, {
+		position: new FVector( 0,.2), radius:.35
+		});
 		
 		
-		var playButton = new FButton(Assets.getBitmapData("assets/playButton.png"),"");
+		var playButton = new FButton(Assets.getBitmapData("assets/GreenButton.png"),"PLAY");
 		playButton.x = 300;
 		playButton.y = 100;
 		
