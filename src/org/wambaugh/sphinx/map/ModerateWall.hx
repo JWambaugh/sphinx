@@ -27,11 +27,11 @@ class ModerateWall extends BaseWall
 		}
 		];
 		super (world, config);
-		health = 200;
+		health = 100;
 	}
 	override public function takeDamage() {
 		if (dead) return;
-		if (health < 100) {
+		if (health < 50) {
 			this.currentImage = Assets.getBitmapData("assets/ModerateWallCracked.png");
 		}
 		var debrisArray = [

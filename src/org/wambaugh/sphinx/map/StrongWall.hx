@@ -27,11 +27,11 @@ class StrongWall extends BaseWall
 		}
 		];
 		super (world, config);
-		health = 300;
+		health = 150;
 	}
 	override public function takeDamage() {
 		if (dead) return;
-		if (health < 150) {
+		if (health < 75) {
 			this.currentImage= Assets.getBitmapData("assets/StrongWallCracked.png");
 		}
 		var debrisArray = [

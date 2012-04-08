@@ -25,7 +25,7 @@ class WeakForceField extends BaseForceField
 		}
 		];
 		super(world, config);
-		health = 75;
+		health = 45;
 		setZPosition(5);
 	}
 	

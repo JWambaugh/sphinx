@@ -25,7 +25,7 @@ class ModerateForceField extends BaseForceField
 		}
 		];
 		super(world, config);
-		health = 150;
+		health = 90;
 		setZPosition(5);
 	}
 	

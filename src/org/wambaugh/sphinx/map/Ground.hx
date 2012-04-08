@@ -29,7 +29,7 @@ class Ground extends FPhysicsEntity
 			}
 			];
 		config.collisionCategory = 8;
-		config.collidesWith = 3;
+		config.collidesWith = 1|2|8|32;
 		config.position = new FVector(0,2);
 		super(world,config);
 	}

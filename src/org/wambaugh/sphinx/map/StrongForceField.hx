@@ -25,7 +25,7 @@ class StrongForceField extends BaseForceField
 		}
 		];
 		super(world, config);
-		health = 225;
+		health = 135;
 		setZPosition(5);
 	}
 	
