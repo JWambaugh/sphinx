@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{319CB2C6-23BD-43E1-85B5-2AAFA3577041}") = "sphinx", "sphinx.nmeproj", "{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Android = Debug|Android
+		Debug|BlackBerry = Debug|BlackBerry
+		Debug|Flash = Debug|Flash
+		Debug|HTML5 = Debug|HTML5
+		Debug|iOS = Debug|iOS
+		Debug|Linux = Debug|Linux
+		Debug|Mac = Debug|Mac
+		Debug|webOS = Debug|webOS
+		Debug|Windows = Debug|Windows
+		Release|Android = Release|Android
+		Release|BlackBerry = Release|BlackBerry
+		Release|Flash = Release|Flash
+		Release|HTML5 = Release|HTML5
+		Release|iOS = Release|iOS
+		Release|Linux = Release|Linux
+		Release|Mac = Release|Mac
+		Release|webOS = Release|webOS
+		Release|Windows = Release|Windows
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|Android.ActiveCfg = Debug|Android
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|Android.Build.0 = Debug|Android
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|BlackBerry.ActiveCfg = Debug|BlackBerry
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|BlackBerry.Build.0 = Debug|BlackBerry
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|Flash.ActiveCfg = Debug|Flash
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|Flash.Build.0 = Debug|Flash
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|HTML5.ActiveCfg = Debug|HTML5
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|HTML5.Build.0 = Debug|HTML5
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|iOS.ActiveCfg = Debug|iOS
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|iOS.Build.0 = Debug|iOS
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|Linux.ActiveCfg = Debug|Linux
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|Linux.Build.0 = Debug|Linux
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|Mac.ActiveCfg = Debug|Mac
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|Mac.Build.0 = Debug|Mac
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|webOS.ActiveCfg = Debug|webOS
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|webOS.Build.0 = Debug|webOS
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|Windows.ActiveCfg = Debug|Windows
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Debug|Windows.Build.0 = Debug|Windows
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|Android.ActiveCfg = Release|Android
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|Android.Build.0 = Release|Android
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|BlackBerry.ActiveCfg = Release|BlackBerry
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|BlackBerry.Build.0 = Release|BlackBerry
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|Flash.ActiveCfg = Release|Flash
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|Flash.Build.0 = Release|Flash
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|HTML5.ActiveCfg = Release|HTML5
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|HTML5.Build.0 = Release|HTML5
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|iOS.ActiveCfg = Release|iOS
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|iOS.Build.0 = Release|iOS
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|Linux.ActiveCfg = Release|Linux
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|Linux.Build.0 = Release|Linux
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|Mac.ActiveCfg = Release|Mac
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|Mac.Build.0 = Release|Mac
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|webOS.ActiveCfg = Release|webOS
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|webOS.Build.0 = Release|webOS
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|Windows.ActiveCfg = Release|Windows
+		{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}.Release|Windows.Build.0 = Release|Windows
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = sphinx\sphinx.nmeproj
+	EndGlobalSection
+EndGlobal
