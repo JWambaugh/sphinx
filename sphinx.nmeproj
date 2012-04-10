@@ -89,8 +89,69 @@
     <Compile Include="src\org\wambaugh\sphinx\map\StrongWall.hx" />
     <Compile Include="src\org\wambaugh\sphinx\map\WeakForceField.hx" />
     <Compile Include="src\org\wambaugh\sphinx\map\WeakWall.hx" />
+    <Compile Include="src\firmament\ui\FButton.hx" />
+    <Compile Include="src\firmament\ui\FWindow.hx" />
+    <Compile Include="..\Firmament.hx\src\firmament\core\FCamera.hx">
+      <Link>firmament\core\FCamera.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FEntity.hx">
+      <Link>firmament\core\FEntity.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FGame.hx">
+      <Link>firmament\core\FGame.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FInput.hx">
+      <Link>firmament\core\FInput.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FPhysicsCollisionEvent.hx">
+      <Link>firmament\core\FPhysicsCollisionEvent.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FPhysicsEntity.hx">
+      <Link>firmament\core\FPhysicsEntity.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FPhysicsWorld.hx">
+      <Link>firmament\core\FPhysicsWorld.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FRenderable.hx">
+      <Link>firmament\core\FRenderable.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FRenderer.hx">
+      <Link>firmament\core\FRenderer.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FSpriteRenderer.hx">
+      <Link>firmament\core\FSpriteRenderer.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FVector.hx">
+      <Link>firmament\core\FVector.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FWireframeRenderer.hx">
+      <Link>firmament\core\FWireframeRenderer.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FWorld.hx">
+      <Link>firmament\core\FWorld.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FWorldPositional.hx">
+      <Link>firmament\core\FWorldPositional.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FWorldPositionalInterface.hx">
+      <Link>firmament\core\FWorldPositionalInterface.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\FBitmapTracer.hx">
+      <Link>firmament\utils\FBitmapTracer.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\FPolySimplifier.hx">
+      <Link>firmament\utils\FPolySimplifier.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\FTracerVertex.hx">
+      <Link>firmament\utils\FTracerVertex.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\FTriangulator.hx">
+      <Link>firmament\utils\FTriangulator.hx</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\org\wambaugh\sphinx\" />
+    <Folder Include="src\firmament\" />
+    <Folder Include="firmament\" />
   </ItemGroup>
 </Project>

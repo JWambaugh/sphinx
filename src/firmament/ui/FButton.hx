@@ -16,6 +16,7 @@ class FButton extends Sprite
 	var text:TextField;
 	public function new(bitmapD:BitmapData,text:String = '') 
 	{
+		super();
 		this.bitmap = new Bitmap(bitmapD);
 		this.text = new TextField();
 		this.text.text = text;
@@ -24,7 +25,7 @@ class FButton extends Sprite
 
 		this.addChild(this.bitmap);
 		this.addChild(this.text);
-		super();
+		
 
 		
 	}

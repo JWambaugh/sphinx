@@ -99,12 +99,15 @@ class Main
 		var draw = new DrawCanvas(300, 300);
 		draw.addEventListener(DrawCanvas.DONE_DRAW, function(e:Event) {
 			stage.removeChild(draw);
-			var blob = new FPhysicsEntity(world, { 
-				type:'dynamic'
-				,position:new FVector( -1, -5)
-				//,sprite: draw.bitmap
-				,shapes:draw.getShapes({restitution:.4})
-				} );
+			var shapes = draw.getShapes({restitution:.4});
+			if(shapes!=null){
+				var blob = new FPhysicsEntity(world, { 
+					type:'dynamic'
+					,position:new FVector( -1, -5)
+					//,sprite: draw.bitmap
+					,shapes:shapes
+					} );
+			}
 		});
 		stage.addChild(draw);
 		
