@@ -5,3 +5,7 @@ sphinx.userprefs
 
 sphinx/.DS_Store
 
+
+.sphinx.nmml.swp
+
+.swp

@@ -1,10 +1,26 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|Android" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Firmament.hx/src/firmament/core/FSpriteRenderer.hx">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|Flash" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="src/org/wambaugh/sphinx/map/ModerateWall.hx">
     <Files>
       <File FileName="sphinx.nmml" Line="1" Column="1" />
-      <File FileName="src/org/wambaugh/sphinx/Main.hx" Line="1" Column="1" />
-      <File FileName="../Firmament.hx/src/firmament/core/FSpriteRenderer.hx" Line="1" Column="2" />
+      <File FileName="src/org/wambaugh/sphinx/Main.hx" Line="75" Column="32" />
+      <File FileName="../Firmament.hx/src/firmament/core/FSpriteRenderer.hx" Line="10" Column="4" />
+      <File FileName="../firmament.hx/src/firmament/core/FSpriteRenderer.hx" Line="1" Column="1" />
+      <File FileName="../firmament.hx/src/firmament/core/FSpriteRenderer.hx" Line="1" Column="1" />
+      <File FileName="../firmament.hx/src/firmament/core/FSpriteRenderer.hx" Line="16" Column="1" />
+      <File FileName="../Firmament.hx/src/firmament/core/FGame.hx" Line="46" Column="5" />
+      <File FileName="../Firmament.hx/src/firmament/core/FWorld.hx" Line="49" Column="9" />
+      <File FileName="../Firmament.hx/src/firmament/core/FPhysicsWorld.hx" Line="77" Column="52" />
+      <File FileName="src/org/wambaugh/sphinx/map/ModerateWall.hx" Line="35" Column="8" />
+      <File FileName="../Firmament.hx/src/firmament/core/FCamera.hx" Line="1" Column="1" />
+      <File FileName="../Firmament.hx/src/firmament/core/FRenderable.hx" Line="1" Column="1" />
+      <File FileName="../Firmament.hx/src/firmament/core/FWorldPositional.hx" Line="1" Column="1" />
+      <File FileName="src/org/wambaugh/sphinx/map/BaseWall.hx" Line="1" Column="1" />
+      <File FileName="src/org/wambaugh/sphinx/map/DestroyableEntity.hx" Line="30" Column="6" />
+      <File FileName="src/org/wambaugh/sphinx/map/Ground.hx" Line="19" Column="3" />
+      <File FileName="../Firmament.hx/src/firmament/core/FPhysicsEntity.hx" Line="36" Column="48" />
+      <File FileName="../Firmament.hx/src/firmament/core/FVector.hx" Line="1" Column="1" />
+      <File FileName="src/org/wambaugh/sphinx/map/Background.hx" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

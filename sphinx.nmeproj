@@ -148,6 +148,7 @@
     <Compile Include="..\Firmament.hx\src\firmament\utils\FTriangulator.hx">
       <Link>firmament\utils\FTriangulator.hx</Link>
     </Compile>
+    <Compile Include="firmament\core\FTilesheetRenderer.hx" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\org\wambaugh\sphinx\" />

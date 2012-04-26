@@ -27,7 +27,7 @@ class DestroyableEntity extends FPhysicsEntity
 			}
 			var damage = speed * 10 ;
 			health = health - damage;
-			trace (health);
+			//trace (health);
 			takeDamage();
 			if (this.health <= 0) {
 				this.delete();
