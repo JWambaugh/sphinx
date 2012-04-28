@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	<!-- metadata, make sure 'package' is at least 2 segments (ie. com.myproject) -->
-	<app file="NewProject" title="New Project" main="org.wambaugh.sphinx.Main" package="org.wambaugh.sphinx" 
+	<app file="Sphinx" title="SpaceGate" main="org.wambaugh.sphinx.Main" package="org.wambaugh.sphinx" 
 		version="1.0.0" company="Jordan Wambaugh" />
 		
 	<!-- output -->
-	<window width="800" height="480" fps="60" background="0xFFFFFF" orientation="landscape" resizable="true" />
+	<window width="800" height="480" fps="30" background="0xFFFFFF" orientation="landscape" resizable="true" />
 	<set name="BUILD_DIR" value="bin" />
 	
 	<!-- classpath, haxe libs -->
-	<classpath name="c:\firmament.hx\src" />
+	<classpath name="../firmament.hx/src" />
 	<classpath name="src" />
 	
 	<haxelib name="nme" /><haxelib name="box2d" />

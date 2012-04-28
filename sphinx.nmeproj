@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Android</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EFAF1A12-575D-4CAC-B883-A53970B0E6A0}</ProjectGuid>
+    <TargetNMMLFile>sphinx.nmml</TargetNMMLFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Android' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|BlackBerry' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Flash' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|HTML5' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iOS' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.</OutputPath>
+    <AdditionalArguments>-simulator</AdditionalArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Linux' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Mac' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|webOS' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Android' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|BlackBerry' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Flash' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|HTML5' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iOS' ">
+    <OutputPath>.</OutputPath>
+    <AdditionalArguments>-simulator</AdditionalArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Linux' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Mac' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|webOS' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Windows' ">
+    <OutputPath>.</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="assets\nme.svg" />
+    <Compile Include="src\org\wambaugh\sphinx\Main.hx" />
+    <Compile Include="sphinx.nmml" />
+    <Compile Include="src\org\wambaugh\sphinx\draw\DrawCanvas.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\entities\BadGuy.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\entities\Grunt.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\map\Background.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\map\BaseForceField.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\map\BaseWall.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\map\DestroyableEntity.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\map\Ground.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\map\ModerateWall.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\map\StrongWall.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\map\WeakForceField.hx" />
+    <Compile Include="src\org\wambaugh\sphinx\map\WeakWall.hx" />
+    <Compile Include="src\firmament\ui\FButton.hx" />
+    <Compile Include="src\firmament\ui\FWindow.hx" />
+    <Compile Include="..\Firmament.hx\src\firmament\core\FCamera.hx">
+      <Link>firmament\core\FCamera.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FEntity.hx">
+      <Link>firmament\core\FEntity.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FGame.hx">
+      <Link>firmament\core\FGame.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FInput.hx">
+      <Link>firmament\core\FInput.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FPhysicsCollisionEvent.hx">
+      <Link>firmament\core\FPhysicsCollisionEvent.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FPhysicsEntity.hx">
+      <Link>firmament\core\FPhysicsEntity.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FPhysicsWorld.hx">
+      <Link>firmament\core\FPhysicsWorld.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FRenderable.hx">
+      <Link>firmament\core\FRenderable.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FRenderer.hx">
+      <Link>firmament\core\FRenderer.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FSpriteRenderer.hx">
+      <Link>firmament\core\FSpriteRenderer.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FVector.hx">
+      <Link>firmament\core\FVector.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FWireframeRenderer.hx">
+      <Link>firmament\core\FWireframeRenderer.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FWorld.hx">
+      <Link>firmament\core\FWorld.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FWorldPositional.hx">
+      <Link>firmament\core\FWorldPositional.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\core\FWorldPositionalInterface.hx">
+      <Link>firmament\core\FWorldPositionalInterface.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\FBitmapTracer.hx">
+      <Link>firmament\utils\FBitmapTracer.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\FPolySimplifier.hx">
+      <Link>firmament\utils\FPolySimplifier.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\FTracerVertex.hx">
+      <Link>firmament\utils\FTracerVertex.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\FTriangulator.hx">
+      <Link>firmament\utils\FTriangulator.hx</Link>
+    </Compile>
+    <Compile Include="firmament\core\FTilesheetRenderer.hx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\org\wambaugh\sphinx\" />
+    <Folder Include="src\firmament\" />
+    <Folder Include="firmament\" />
+  </ItemGroup>
+</Project>

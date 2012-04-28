@@ -27,11 +27,11 @@ class ModerateWall extends BaseWall
 		}
 		];
 		super (world, config);
-		health = 200;
+		health = 100;
 	}
 	override public function takeDamage() {
 		if (dead) return;
-		if (health < 100) {
+		if (health < 50) {
 			this.currentImage = Assets.getBitmapData("assets/ModerateWallCracked.png");
 		}
 		var debrisArray = [
@@ -48,7 +48,7 @@ class ModerateWall extends BaseWall
 			for (num in 1 ... 6) {
 				var ent;
 				ent = new FPhysicsEntity(cast(world),{
-					sprite:new Bitmap(Assets.getBitmapData("assets/ModChardWall" + num + ".png"))
+					sprite:Assets.getBitmapData("assets/ModChardWall" + num + ".png")
 					,type:"dynamic"
 					,angle: Math.random()*6.28
 					,position:this.getPosition()

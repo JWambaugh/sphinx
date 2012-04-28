@@ -12,9 +12,12 @@ import nme.Lib;
 import nme.utils.WeakRef;
 import org.wambaugh.sphinx.draw.DrawCanvas;
 import org.wambaugh.sphinx.entities.Grunt;
+import org.wambaugh.sphinx.map.Background;
 import org.wambaugh.sphinx.map.Ground;
+import org.wambaugh.sphinx.map.ModerateForceField;
 import org.wambaugh.sphinx.map.ModerateWall;
 import org.wambaugh.sphinx.map.StrongWall;
+import org.wambaugh.sphinx.map.StrongForceField;
 import org.wambaugh.sphinx.map.WeakForceField;
 import org.wambaugh.sphinx.map.WeakWall;
 import nme.display.Sprite;
@@ -23,6 +26,8 @@ import nme.text.TextField;
 import nme.events.MouseEvent;
 import nme.Assets;
 import nme.events.Event;
+
+
 /**
  * ...
  * @author Jordan Wambaugh
@@ -54,15 +59,20 @@ class Main
 		var game = new FGame();
 		game.addWorld(world);
 		game.addCamera(camera);
+		
 		var logo = new FButton(Assets.getBitmapData("assets/SpaceGateLogo.png"),"");
-		logo.x =400;
-		logo.y =100;
+		logo.x =200;
+		logo.y = 0;
+		var logoMaker = new nme.display.Sprite();
+		stage.addChild(logoMaker);
+		logoMaker.addChild(logo);
 		
 		var grunt = new Grunt(world, {
 			position: new FVector(0,0)
 			} );
 		var ground = new Ground(world);
 		camera.setZoom(100);
+		
 		var weakWall = new WeakWall (world, {
 		position: new FVector( -.5, 0)
 		} );
@@ -73,14 +83,14 @@ class Main
 		var moderateWall = new ModerateWall(world, {
 			position: new FVector(-.9,0)
 		} );
-		//var weakForceField = new WeakForceField (world, {
-		//position: new FVector( 0,.2), radius:.35
-		//});
+		var weakForceField = new WeakForceField (world, {
+		position: new FVector( 0,.2), radius:.35
+		});
 		
 		
-		var playButton = new FButton(Assets.getBitmapData("assets/playButton.png"),"");
-		playButton.x = 300;
-		playButton.y = 100;
+		var playButton = new FButton(Assets.getBitmapData("assets/GreenButton.png"),"PLAY");
+		playButton.x = 0;
+		playButton.y = 300;
 		
 		playButton.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) { 
 			trace('Clicked!'); 
@@ -89,7 +99,6 @@ class Main
 		var mainMenu = new nme.display.Sprite();
 		stage.addChild(mainMenu);
 		mainMenu.addChild(playButton);
-		
 		
 		var draw = new DrawCanvas(300, 300);
 		
@@ -100,16 +109,21 @@ class Main
 			var shapes = draw.getShapes( { restitution:.4 } );
 			if (shapes == null) return;
 			stage.removeChild(draw);
-			var blob = new FPhysicsEntity(world, { 
-				
-				type:'dynamic'
-				,position:new FVector( -1, -5)
-				//,sprite: draw.bitmap
-				,shapes:shapes
-				} );
+			var shapes = draw.getShapes({restitution:.4});
+			if(shapes!=null){
+				var blob = new FPhysicsEntity(world, { 
+					type:'dynamic'
+					,position:new FVector( -1, -5)
+					//,sprite: draw.bitmap
+					,shapes:shapes
+					} );
+			}
 		});
 		stage.addChild(draw);
 		
+		var background = new Background (world);
+			
+						
 	}
 	
 }

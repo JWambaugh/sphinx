@@ -22,9 +22,10 @@ class DrawCanvas extends Sprite
 	public function new(width:Int, height:Int) 
 	{
 		super();
+
 		
 		this.bitmap = new Bitmap(new BitmapData(width, height, true, 0));
-		trace(this.);
+		
 		this.drawSprite = new Sprite();
 		this.addChild(this.bitmap);
 		this.graphics.lineStyle(1,0xFF0010DD);
@@ -38,8 +39,10 @@ class DrawCanvas extends Sprite
 		} );
 		this.addEventListener(MouseEvent.MOUSE_UP, function(e:MouseEvent) { 
 			if (this.hasDrawn && this.startDraw!=null) {
+				trace('drawing closing line');
 				this.graphics.lineTo(startDraw.x, startDraw.y);
 				this.bitmap.bitmapData.draw(this);
+				this.hasDrawn = false;
 				this.dispatchEvent(new Event(DONE_DRAW));
 			}
 			this.hasDrawn = false;
@@ -51,13 +54,14 @@ class DrawCanvas extends Sprite
 	
 	public function drawTo(e:MouseEvent) {
 		if (this.hasDrawn) {
-			trace('drawTO');
+		
 			this.graphics.lineTo(e.localX, e.localY);
+
 			trace(e.localX + " " + e.localY);
-			trace('about to crash');
+		
 			if (this.bitmap.bitmapData == null) trace('bm data is null');
 			this.bitmap.bitmapData.draw(this,null,null,null,null,true);
-			trace('end draw_to');
+
 		}
 		
 		
@@ -71,7 +75,10 @@ class DrawCanvas extends Sprite
 		trace('done Tracing.');
 		if (poly == null) return null;
 		var triangles = FTriangulator.getTriangles(poly);
-		
+		if(triangles == null){
+			trace('triangles is null!');
+			return null;
+		}
 		var shapes = new Array<Dynamic>() ;
 		for (triangle in triangles) {
 			var shape = Reflect.copy(shapeDef);

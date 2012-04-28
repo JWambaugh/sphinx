@@ -15,7 +15,9 @@ class DestroyableEntity extends FPhysicsEntity
 	public function new(world:FPhysicsWorld, config:Dynamic) 
 	{
 		dead = false;
+		super(world, config);
 		this.addEventListener(FGame.COLLISION_EVENT, function(e:FPhysicsCollisionEvent) {
+			//trace('collision detected!');
 			var speed = e.getCollisionSpeed();
 			 if (speed == 0) {
 				return;
@@ -23,9 +25,9 @@ class DestroyableEntity extends FPhysicsEntity
 			if (speed < 0) {
 				speed =speed * -1;
 			}
-			var damage = speed * 7 ;
+			var damage = speed * 10 ;
 			health = health - damage;
-			trace (health);
+			//trace (health);
 			takeDamage();
 			if (this.health <= 0) {
 				this.delete();
@@ -34,7 +36,7 @@ class DestroyableEntity extends FPhysicsEntity
 			}
 			
 		});
-		super(world, config);
+		
 	}
 	public function getHealth():Float{
 		return health;

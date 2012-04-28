@@ -1,5 +1,6 @@
 package org.wambaugh.sphinx.entities;
 import firmament.core.FPhysicsWorld;
+import firmament.core.FVector;
 import nme.display.Bitmap;
 import nme.Assets;
 import firmament.core.FPhysicsEntity;
@@ -27,24 +28,31 @@ class Grunt extends BadGuy
 				}
 				];
 		super(world, config);
-		health = 1;
+		health = 15;
 	}
 	override public function takeDamage() {
+		if (dead) return;
 		if (this.health <= 0) {
-			for ( count in 1 ... 8) {
+			
+			for ( count in 1 ... 10) {
+				var randomY = this.getPositionY() + (Math.random() * .4) - .2;
+				var randomX = this.getPositionX() + (Math.random() * .4) - .2;
 				var ent = new FPhysicsEntity(cast(world),{
 					sprite: Assets.getBitmapData("assets/AlienBlood.png")
 					,type:"dynamic"
-					,position:this.getPosition()
+					,position: new FVector (randomX,randomY)
 					,imageScale:712
-					,maxLifeSeconds:.5+ Math.random()*2
+					,maxLifeSeconds:.25+ Math.random()*.5
 					,shapes:[ {
-							type:'circle'
-							,radius:.03
-							,restitution:0
+							type:'box'
+							,height:.0478
+							,width:.0478
+							,restitution:.1
 							,density:.1
-							,friction:.1
+							,friction:.9
 						}]
+					,collisionCategory:32 
+					,collidesWith:1|2|8
 					});
 				}
 			}

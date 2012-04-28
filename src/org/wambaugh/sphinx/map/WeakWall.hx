@@ -30,11 +30,11 @@ class WeakWall extends BaseWall
 		];
 		
 		super (world, config);
-		health = 100;
+		health = 50;
 	}
 	override public function takeDamage() {
 		if (dead) return;
-		if (health < 50) {
+		if (health < 25) {
 			this.currentImage = Assets.getBitmapData("assets/weakWallCracked.png");
 		}
 		var debrisArray = [
@@ -54,7 +54,7 @@ class WeakWall extends BaseWall
 				ent = new FPhysicsEntity(cast(world),{
 					sprite:Assets.getBitmapData("assets/ChardWall" + num + ".png")
 					,type:"dynamic"
-					,angle: getAngle()
+					,angle: Math.random()*6.28 //getAngle()
 					,position:this.getPosition()
 					,imageScale:589
 					,maxLifeSeconds:.5+ Math.random()*2
