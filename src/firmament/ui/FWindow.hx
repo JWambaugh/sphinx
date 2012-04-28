@@ -11,7 +11,7 @@ class FWindow extends Sprite
 
 	public function new() 
 	{
-		
+		super();
 	}
 	
 }
