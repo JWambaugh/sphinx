@@ -28,7 +28,7 @@ class DrawCanvas extends Sprite
 		
 		this.drawSprite = new Sprite();
 		this.addChild(this.bitmap);
-		this.graphics.lineStyle(1,0xFF0010DD);
+		this.graphics.lineStyle(25,0xFF0010DD);
 		this.addEventListener(MouseEvent.MOUSE_MOVE, drawTo);
 		this.addEventListener(MouseEvent.MOUSE_DOWN, function(e:MouseEvent) { 
 			trace('down');

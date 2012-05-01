@@ -45,7 +45,7 @@ class Main
 		#elseif flash
 		haxe.Log.trace = function(v,?pos) { flash.Lib.trace(pos.className+"#"+pos.methodName+"("+pos.lineNumber+"): "+v); }
 		#end
-		
+		trace('no tracing?');
 		
 		var stage = Lib.current.stage;
 		stage.scaleMode = StageScaleMode.NO_SCALE;
@@ -69,6 +69,10 @@ class Main
 		
 		var grunt = new Grunt(world, {
 			position: new FVector(0,0)
+			} );
+			
+		var grunt2 = new Grunt(world, {
+			position: new FVector(0,-2)
 			} );
 		var ground = new Ground(world);
 		camera.setZoom(100);
@@ -109,11 +113,14 @@ class Main
 			var shapes = draw.getShapes( { restitution:.4 } );
 			if (shapes == null) return;
 			stage.removeChild(draw);
-			var shapes = draw.getShapes({restitution:.4});
+			var shapes = draw.getShapes( { 
+				restitution:.4
+				,density:.5
+			});
 			if(shapes!=null){
 				var blob = new FPhysicsEntity(world, { 
 					type:'dynamic'
-					,position:new FVector( -1, -5)
+					,position:new FVector( -1, -2.5)
 					//,sprite: draw.bitmap
 					,shapes:shapes
 					} );
