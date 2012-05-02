@@ -45,11 +45,13 @@ class Main
 		#elseif flash
 		haxe.Log.trace = function(v,?pos) { flash.Lib.trace(pos.className+"#"+pos.methodName+"("+pos.lineNumber+"): "+v); }
 		#end
-		
+		trace('no tracing?');
 		
 		var stage = Lib.current.stage;
 		stage.scaleMode = StageScaleMode.NO_SCALE;
 		stage.align = StageAlign.TOP_LEFT;
+		
+		
 		// entry point
 		var camera = new FCamera(stage.stageWidth, stage.stageHeight);
 		stage.addChild(camera);
@@ -68,12 +70,17 @@ class Main
 		var grunt = new Grunt(world, {
 			position: new FVector(0,0)
 			} );
+			
+		var grunt2 = new Grunt(world, {
+			position: new FVector(0,-2)
+			} );
 		var ground = new Ground(world);
 		camera.setZoom(100);
 		
 		var weakWall = new WeakWall (world, {
 		position: new FVector( -.5, 0)
 		} );
+		
 		var strongWall = new StrongWall(world, {
 			position: new FVector(-.7,0)
 		} );
@@ -92,18 +99,28 @@ class Main
 		playButton.addEventListener(MouseEvent.CLICK, function(e:MouseEvent) { 
 			trace('Clicked!'); 
 		} );
+		
 		var mainMenu = new nme.display.Sprite();
 		stage.addChild(mainMenu);
 		mainMenu.addChild(playButton);
 		
 		var draw = new DrawCanvas(300, 300);
+		
+		
 		draw.addEventListener(DrawCanvas.DONE_DRAW, function(e:Event) {
+			trace('done_drawcalled!');
+			
+			var shapes = draw.getShapes( { restitution:.4 } );
+			if (shapes == null) return;
 			stage.removeChild(draw);
-			var shapes = draw.getShapes({restitution:.4});
+			var shapes = draw.getShapes( { 
+				restitution:.4
+				,density:.5
+			});
 			if(shapes!=null){
 				var blob = new FPhysicsEntity(world, { 
 					type:'dynamic'
-					,position:new FVector( -1, -5)
+					,position:new FVector( -1, -2.5)
 					//,sprite: draw.bitmap
 					,shapes:shapes
 					} );

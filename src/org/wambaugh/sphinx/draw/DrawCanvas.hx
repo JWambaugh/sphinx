@@ -17,19 +17,25 @@ class DrawCanvas extends Sprite
 	public var bitmap:Bitmap;
 	var hasDrawn:Bool;
 	var startDraw: { x:Float, y:Float };
-	public static inline var DONE_DRAW='doneDraw';
+	public static inline var DONE_DRAW = 'doneDraw';
+	var drawSprite:Sprite;
 	public function new(width:Int, height:Int) 
 	{
 		super();
-		this.bitmap = new Bitmap(new BitmapData(width, height,true,0));
+
 		
+		this.bitmap = new Bitmap(new BitmapData(width, height, true, 0));
+		
+		this.drawSprite = new Sprite();
 		this.addChild(this.bitmap);
-		this.graphics.lineStyle(1,0x0010DD);
+		this.graphics.lineStyle(25,0xFF0010DD);
 		this.addEventListener(MouseEvent.MOUSE_MOVE, drawTo);
 		this.addEventListener(MouseEvent.MOUSE_DOWN, function(e:MouseEvent) { 
+			trace('down');
 			this.graphics.moveTo(e.localX, e.localY);
 			this.hasDrawn = true; 
-			this.startDraw = { x:e.localX, y:e.localY};
+			this.startDraw = { x:e.localX, y:e.localY };
+			trace('end_down');
 		} );
 		this.addEventListener(MouseEvent.MOUSE_UP, function(e:MouseEvent) { 
 			if (this.hasDrawn && this.startDraw!=null) {
@@ -48,9 +54,14 @@ class DrawCanvas extends Sprite
 	
 	public function drawTo(e:MouseEvent) {
 		if (this.hasDrawn) {
+		
 			this.graphics.lineTo(e.localX, e.localY);
-			this.bitmap.bitmapData.draw(this);
-			//trace('Draw!');
+
+			trace(e.localX + " " + e.localY);
+		
+			if (this.bitmap.bitmapData == null) trace('bm data is null');
+			this.bitmap.bitmapData.draw(this,null,null,null,null,true);
+
 		}
 		
 		
@@ -62,7 +73,7 @@ class DrawCanvas extends Sprite
 		trace('done. Tracing...');
 		var poly = tracer.getPolys();
 		trace('done Tracing.');
-		trace('Vectors:'+poly.length);
+		if (poly == null) return null;
 		var triangles = FTriangulator.getTriangles(poly);
 		if(triangles == null){
 			trace('triangles is null!');

@@ -11,27 +11,20 @@ import nme.text.TextField;
 
 class FButton extends Sprite
 {
-
 	var bitmap:Bitmap;
-	var text:TextField;
-	public function new(bitmapD:BitmapData,text:String = '') 
+	var textF:TextField;
+	public function new(bitmapD:BitmapData, text:String = '') 
 	{
 		super();
 		this.bitmap = new Bitmap(bitmapD);
-		this.text = new TextField();
-		this.text.text = text;
-
-		
-
+		this.textF = new TextField();
+		this.textF.text = text;
 		this.addChild(this.bitmap);
-		this.addChild(this.text);
+		this.addChild(this.textF);
 		
 
 		
 	}
-	
-	
-	
 	
 	
 }
