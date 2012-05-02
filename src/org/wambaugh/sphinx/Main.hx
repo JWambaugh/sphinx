@@ -26,7 +26,7 @@ import nme.text.TextField;
 import nme.events.MouseEvent;
 import nme.Assets;
 import nme.events.Event;
-
+import firmament.utils.FAutoCrop;
 
 /**
  * ...
@@ -110,23 +110,40 @@ class Main
 		draw.addEventListener(DrawCanvas.DONE_DRAW, function(e:Event) {
 			trace('done_drawcalled!');
 			
-			var shapes = draw.getShapes( { restitution:.4 } );
+			var shapes = draw.getShapes( { restitution:.4,density:.5 } );
 			if (shapes == null) return;
 			stage.removeChild(draw);
-			var shapes = draw.getShapes( { 
-				restitution:.4
-				,density:.5
-			});
+			
 			if(shapes!=null){
 				var blob = new FPhysicsEntity(world, { 
 					type:'dynamic'
 					,position:new FVector( -1, -2.5)
-					//,sprite: draw.bitmap
+					,sprite: FAutoCrop.crop(draw.bitmap.bitmapData)
 					,shapes:shapes
 					} );
 			}
 		});
 		stage.addChild(draw);
+		
+		/*
+		var ent = new FPhysicsEntity(world, {
+			type:'dynamic'
+			,position:new FVector( -.6, -2.1)
+			,sprite:Assets.getBitmapData("assets/alien.png")
+			,imageScale:712
+			,angle:.5
+			,shapes:[{ 
+				type: 'box'
+				,width:.3441
+				,height:.5
+				,restitution:.1
+				,density:.5
+				,friction:.7
+				}]
+			
+		});*/
+		
+		
 		
 		var background = new Background (world);
 			

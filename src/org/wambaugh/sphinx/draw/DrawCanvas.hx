@@ -1,4 +1,5 @@
 package org.wambaugh.sphinx.draw;
+
 import nme.display.Bitmap;
 import nme.display.BitmapData;
 import nme.display.Sprite;
@@ -40,7 +41,7 @@ class DrawCanvas extends Sprite
 		this.addEventListener(MouseEvent.MOUSE_UP, function(e:MouseEvent) { 
 			if (this.hasDrawn && this.startDraw!=null) {
 				trace('drawing closing line');
-				this.graphics.lineTo(startDraw.x, startDraw.y);
+				//this.graphics.lineTo(startDraw.x, startDraw.y);
 				this.bitmap.bitmapData.draw(this);
 				this.hasDrawn = false;
 				this.dispatchEvent(new Event(DONE_DRAW));
@@ -69,17 +70,20 @@ class DrawCanvas extends Sprite
 	
 	
 	public function getShapes(shapeDef:Dynamic) {
+		trace('getSHapes called');
 		var tracer = new FBitmapTracer(this.bitmap.bitmapData);
 		trace('done. Tracing...');
 		var poly = tracer.getPolys();
 		trace('done Tracing.');
 		if (poly == null) return null;
 		var triangles = FTriangulator.getTriangles(poly);
+		trace("triangle:" +triangles[0][0].x + triangles[0][0].y);
 		if(triangles == null){
 			trace('triangles is null!');
 			return null;
 		}
 		var shapes = new Array<Dynamic>() ;
+		
 		for (triangle in triangles) {
 			var shape = Reflect.copy(shapeDef);
 			shape.type = 'polygon';
