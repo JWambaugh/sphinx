@@ -149,10 +149,26 @@
       <Link>firmament\utils\FTriangulator.hx</Link>
     </Compile>
     <Compile Include="firmament\core\FTilesheetRenderer.hx" />
+    <Compile Include="..\Firmament.hx\src\firmament\utils\FAutoCrop.hx">
+      <Link>firmament\utils\FAutoCrop.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\FMisc.hx">
+      <Link>firmament\utils\FMisc.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\loader\FEntityLoader.hx">
+      <Link>firmament\utils\loader\FEntityLoader.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\loader\FEntitySerializerInterface.hx">
+      <Link>firmament\utils\loader\FEntitySerializerInterface.hx</Link>
+    </Compile>
+    <Compile Include="..\Firmament.hx\src\firmament\utils\loader\serializer\FJsonSerializer.hx">
+      <Link>firmament\utils\loader\serializer\FJsonSerializer.hx</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\org\wambaugh\sphinx\" />
     <Folder Include="src\firmament\" />
     <Folder Include="firmament\" />
+    <Folder Include="firmament\utils\loader\" />
   </ItemGroup>
 </Project>

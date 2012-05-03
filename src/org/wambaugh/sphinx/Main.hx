@@ -27,6 +27,8 @@ import nme.events.MouseEvent;
 import nme.Assets;
 import nme.events.Event;
 import firmament.utils.FAutoCrop;
+import firmament.utils.loader.FEntityLoader;
+
 
 /**
  * ...
@@ -67,13 +69,12 @@ class Main
 		stage.addChild(logoMaker);
 		logoMaker.addChild(logo);
 		
-		var grunt = new Grunt(world, {
-			position: new FVector(0,0)
+		//load a grunt with the entity loader
+		var grunt = FEntityLoader.loadEntity("assets/entities/grunt.json", world, {
+			position: {x:0,y:0}		//for some reason, you can't use an FVector here or flash won't work.
 			} );
 			
-		var grunt2 = new Grunt(world, {
-			position: new FVector(0,-2)
-			} );
+		
 		var ground = new Ground(world);
 		camera.setZoom(100);
 		
@@ -146,7 +147,8 @@ class Main
 		
 		
 		var background = new Background (world);
-			
+		
+		
 						
 	}
 	

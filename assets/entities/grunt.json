@@ -1,0 +1,17 @@
+{
+	"type":"dynamic"
+	,"sprite":"assets/alien.png"
+	,"className":"org.wambaugh.sphinx.entities.Grunt"
+	,"imageScale":712
+	,"shapes":[
+		{
+		"type": "box"
+		,"width":0.3441
+		,"height":0.5
+		,"restitution":0.1
+		,"density":0.5
+		,"friction":0.7
+		}	
+	]
+
+}

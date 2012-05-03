@@ -13,6 +13,7 @@
 	<classpath name="src" />
 	
 	<haxelib name="nme" /><haxelib name="box2d" />
+	<haxelib name="nme" /><haxelib name="hxJson2" />
 	
 	<!-- assets -->
 	<icon name="assets/nme.svg" />
