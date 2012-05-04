@@ -1,0 +1,67 @@
+{
+"entities":[
+	{
+		"entityFile":"assets/entities/ground.json"
+	}
+	
+	,{
+		"entityFile":"assets/entities/weakWall.json"
+		,"config":{
+			"position":{"x":-0.5,"y":0}
+			,"angle":0.5
+		}
+	}
+	
+	,{
+		"entityFile":"assets/entities/strongWall.json"
+		,"config":{
+			"position":{"x":-0.11,"y":-2}
+		}
+	}
+	,{
+		"entityFile":"assets/entities/moderateWall.json"
+		,"config":{
+			"position":{"x":-0.9,"y":0}
+		}
+	}
+	
+	
+	
+	,{
+		"entityFile":"assets/entities/grunt.json"
+		,"config":{
+			"position":{"x":0,"y":0}
+		}
+	}
+
+	,{
+		"entityFile":"assets/entities/weakForceField.json"
+		,"config":{
+			"position":{"x":0,"y":0.2}
+		}
+	}
+	
+	
+	,{
+		"entityFile":"assets/entities/grunt.json"
+		,"config":{
+			"position":{"x":-2,"y":-1}
+		}
+	}
+	,{
+		"entityFile":"assets/entities/grunt.json"
+		,"config":{
+			"position":{"x":2,"y":-1}
+			,"angle":2
+		}
+	}
+	,{
+		"entityFile":"assets/entities/grunt.json"
+		,"config":{
+			"position":{"x":1,"y":-1}
+			,"angle":1
+		}
+	}
+]
+
+}

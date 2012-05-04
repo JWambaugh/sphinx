@@ -69,28 +69,12 @@ class Main
 		stage.addChild(logoMaker);
 		logoMaker.addChild(logo);
 		
-		//load a grunt with the entity loader
-		var grunt = FEntityLoader.loadEntity("assets/entities/grunt.json", world, {
-			position: {x:0,y:0}		//for some reason, you can't use an FVector here or flash won't work.
-			} );
-			
 		
-		var ground = new Ground(world);
+		
+	
 		camera.setZoom(100);
 		
-		var weakWall = new WeakWall (world, {
-		position: new FVector( -.5, 0)
-		} );
 		
-		var strongWall = new StrongWall(world, {
-			position: new FVector(-.7,0)
-		} );
-		var moderateWall = new ModerateWall(world, {
-			position: new FVector(-.9,0)
-		} );
-		var weakForceField = new WeakForceField (world, {
-		position: new FVector( 0,.2), radius:.35
-		});
 		
 		
 		var playButton = new FButton(Assets.getBitmapData("assets/GreenButton.png"),"PLAY");
@@ -147,6 +131,13 @@ class Main
 		
 		
 		var background = new Background (world);
+		
+		
+		
+		//load our map!
+		var loader:FEntityLoader = FEntityLoader.getInstance();
+		
+		loader.loadMap("assets/maps/map1.json", world);
 		
 		
 						

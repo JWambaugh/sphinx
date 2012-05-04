@@ -1,0 +1,15 @@
+{
+	"className":"org.wambaugh.sphinx.map.WeakForceField"
+	,"sprite":"assets/forceField.png"
+	,"type": "static"
+	,"imageScale": 377
+	,"shapes": [
+		{
+			"type":"circle"
+			,"radius": 0.35
+			,"restitution":0.8
+			,"friction":0
+		}
+	]
+	
+}

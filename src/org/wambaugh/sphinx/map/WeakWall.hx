@@ -15,19 +15,7 @@ class WeakWall extends BaseWall
 
 	public function new(world:FPhysicsWorld,config:Dynamic) 
 	{
-		config.sprite =Assets.getBitmapData("assets/weakWall.png");
-		config.type = "dynamic";
-		config.imageScale = 589;
-		config.shapes = [
-		{
-			type:'box'
-			,width:.151
-			,height:.7
-			,restitution:.1
-			,density:.5
-			,friction:.7
-		}
-		];
+		
 		
 		super (world, config);
 		health = 50;

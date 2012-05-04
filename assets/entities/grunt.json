@@ -2,7 +2,7 @@
 	"type":"dynamic"
 	,"sprite":"assets/alien.png"
 	,"className":"org.wambaugh.sphinx.entities.Grunt"
-	,"imageScale":712
+	,"imageScale": 712
 	,"shapes":[
 		{
 		"type": "box"
