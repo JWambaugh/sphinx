@@ -5,7 +5,7 @@ import firmament.core.FPhysicsEntity;
 import firmament.core.FGame;
 import firmament.core.FPhysicsWorld;
 import firmament.core.FVector;
-import firmament.ui.FButton;
+
 import nme.display.StageAlign;
 import nme.display.StageScaleMode;
 import nme.Lib;
@@ -62,7 +62,7 @@ class Main
 		game.addWorld(world);
 		game.addCamera(camera);
 		
-		var logo = new FButton(Assets.getBitmapData("assets/SpaceGateLogo.png"),"");
+		var logo = new Bitmap(Assets.getBitmapData("assets/SpaceGateLogo.png"));
 		logo.x =200;
 		logo.y = 0;
 		var logoMaker = new nme.display.Sprite();
@@ -77,7 +77,7 @@ class Main
 		
 		
 		
-		var playButton = new FButton(Assets.getBitmapData("assets/GreenButton.png"),"PLAY");
+		var playButton = new Bitmap(Assets.getBitmapData("assets/GreenButton.png"));
 		playButton.x = 0;
 		playButton.y = 300;
 		
@@ -140,7 +140,7 @@ class Main
 		loader.loadMap("assets/maps/map1.json", world);
 		
 		
-						
+	
 	}
 	
 }
