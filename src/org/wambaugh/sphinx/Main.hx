@@ -139,7 +139,7 @@ class Main
 		
 		loader.loadMap("assets/maps/map1.json", world);
 		
-		
+		stage.addEventListener(Event.RESIZE, function(e:Event) { camera.resizeToStage(); } );
 	
 	}
 	
