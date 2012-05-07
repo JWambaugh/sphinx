@@ -9,10 +9,9 @@
 	<set name="BUILD_DIR" value="bin" />
 	
 	<!-- classpath, haxe libs -->
-	<classpath name="../firmament.hx/src" />
+	<classpath name="../firmament.hx/lib" />
 	<classpath name="src" />
 	
-	<haxelib name="nme" /><haxelib name="box2d" />
 	<haxelib name="nme" /><haxelib name="hxJson2" />
 	
 	<!-- assets -->

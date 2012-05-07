@@ -57,7 +57,7 @@ class Main
 		// entry point
 		var camera = new FCamera(stage.stageWidth, stage.stageHeight);
 		stage.addChild(camera);
-		var world = new FPhysicsWorld(new FVector(0, 10));
+		var world = new FPhysicsWorld(new FVector(0, 7));
 		var game = new FGame();
 		game.addWorld(world);
 		game.addCamera(camera);
