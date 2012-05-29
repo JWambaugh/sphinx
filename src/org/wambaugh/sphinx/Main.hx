@@ -137,7 +137,7 @@ class Main
 		//load our map!
 		var loader:FEntityLoader = FEntityLoader.getInstance();
 		
-		loader.loadMap("assets/maps/map2.json", world);
+		loader.loadMap("assets/maps/map3.json", world);
 		
 		stage.addEventListener(Event.RESIZE, function(e:Event) { camera.resizeToStage(); } );
 	

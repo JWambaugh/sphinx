@@ -5,6 +5,7 @@ import haxe.Timer;
 import nme.display.Bitmap;
 import nme.Assets;
 import firmament.core.FPhysicsEntity;
+import firmament.core.FVector;
 /**
  * ...
  * @author Gunnar Wambaugh
@@ -39,19 +40,21 @@ class WeakWall extends BaseWall
 			
 			for (num in 1 ... 6) {
 				var ent;
+				var randomY = this.getPositionY() + (Math.random() * .2) - .2;
+				var randomX = this.getPositionX() + (Math.random() * .2) - .2;
 				ent = new FPhysicsEntity(cast(world),{
 					sprite:Assets.getBitmapData("assets/ChardWall" + num + ".png")
 					,type:"dynamic"
-					,angle: Math.random()*6.28 //getAngle()
-					,position:this.getPosition()
+					,angle: Math.random() * 6.28 //getAngle()
+					,position: new FVector (randomX, randomY)
 					,imageScale:589
-					,maxLifeSeconds:.5+ Math.random()*2
+					,maxLifeSeconds:.5+ Math.random()*1
 					,shapes:[{
 						type:'box'
 						,width: debrisArray[num-1][0]
 						,height: debrisArray[num-1][1]
-						,restitution:.9
-						,density:.1
+						,restitution:.1
+						,density:.01
 						,friction:.1
 					}]
 				});

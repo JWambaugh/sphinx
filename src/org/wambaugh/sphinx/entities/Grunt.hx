@@ -23,19 +23,19 @@ class Grunt extends BadGuy
 		if (this.health <= 0) {
 			
 			for ( count in 1 ... 10) {
-				var randomY = this.getPositionY() + (Math.random() * .4) - .2;
-				var randomX = this.getPositionX() + (Math.random() * .4) - .2;
+				var randomY = this.getPositionY() + (Math.random() * .5) - .2;
+				var randomX = this.getPositionX() + (Math.random() * .5) - .2;
 				var ent = new FPhysicsEntity(cast(world),{
 					sprite: Assets.getBitmapData("assets/AlienBlood.png")
 					,type:"dynamic"
 					,position: new FVector (randomX,randomY)
 					,imageScale:712
-					,maxLifeSeconds:.25+ Math.random()*.5
+					,maxLifeSeconds:.25+ Math.random()*.25
 					,shapes:[ {
 							type:'box'
 							,height:.0478
 							,width:.0478
-							,restitution:.1
+							,restitution:.2
 							,density:.1
 							,friction:.9
 						}]
