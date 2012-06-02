@@ -32,6 +32,7 @@ class StrongWall extends BaseWall
 			
 		];
 		if (health <= 0) {
+			
 			for (num in 1 ... 6) {
 				var ent;
 				var randomY = this.getPositionY() + (Math.random() * .2) - .2;
