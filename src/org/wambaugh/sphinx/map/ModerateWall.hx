@@ -41,6 +41,7 @@ class ModerateWall extends BaseWall
 				ent = new FPhysicsEntity(cast(world),{
 					sprite:Assets.getBitmapData("assets/ModChardWall" + num + ".png")
 					,type:"dynamic"
+					,objType: "Shrapnel"
 					,angle: Math.random()*6.28
 					,position: new FVector (randomX,randomY)
 					,imageScale:589
@@ -49,9 +50,9 @@ class ModerateWall extends BaseWall
 						type:'box'
 						,width: debrisArray[num-1][0]
 						,height: debrisArray[num-1][1]
-						,restitution:.1
+						,restitution:0
 						,density:.01
-						,friction:.1
+						,friction:.9
 					}]
 				});
 				

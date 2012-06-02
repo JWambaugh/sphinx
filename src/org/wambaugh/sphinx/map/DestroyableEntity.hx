@@ -19,11 +19,19 @@ class DestroyableEntity extends FPhysicsEntity
 		this.addEventListener(FGame.COLLISION_EVENT, function(e:FPhysicsCollisionEvent) {
 			//trace('collision detected!');
 			var speed = e.getCollisionSpeed();
-			 if (speed == 0) {
-				return;
+			var entA = e.getEntityA();
+			var entB = e.getEntityB();
+			if (entA.getConfig().objType == "Shrapnel") {
+				return; 
+			}
+			if (entB.getConfig().objType == "Shrapnel") {
+				return; 
 			}
 			if (speed < 0) {
 				speed =speed * -1;
+			}
+			 if (speed < .05) {
+				return;
 			}
 			var damage = speed * 10 ;
 			health = health - damage;

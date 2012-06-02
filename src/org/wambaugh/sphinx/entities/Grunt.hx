@@ -28,6 +28,7 @@ class Grunt extends BadGuy
 				var ent = new FPhysicsEntity(cast(world),{
 					sprite: Assets.getBitmapData("assets/AlienBlood.png")
 					,type:"dynamic"
+					,objType: "Shrapnel"
 					,position: new FVector (randomX,randomY)
 					,imageScale:712
 					,maxLifeSeconds:.25+ Math.random()*.25
