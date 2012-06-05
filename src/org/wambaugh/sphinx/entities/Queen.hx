@@ -22,10 +22,12 @@ class Queen extends BadGuy
 		if (dead) return;
 		if (this.health < 100 && this.health > 0) {
 			for (count in 1 ... 3) {
+				trace('spawning');
 				var thisY = this.getPositionY() + (Math.random() * .5) - .2;
 				var thisX = this.getPositionX() + (Math.random() * .5) - .2;
-				var grunt= FEntityLoader.getInstance().loadEntity('assets/entities/grunt.json',world,{position:new FVector (thisX,thisY)});
+				var grunt= FEntityLoader.getInstance().loadEntity('assets/entities/grunt.json',this.world,{position:new FVector (thisX,thisY)});
 			}
+			return;
 		}
 		
 		if (this.health <= 0) {
@@ -33,7 +35,7 @@ class Queen extends BadGuy
 			for ( count in 1 ... 10) {
 				var randomY = this.getPositionY() + (Math.random() * .5) - .2;
 				var randomX = this.getPositionX() + (Math.random() * .5) - .2;
-				var ent = new FPhysicsEntity(cast(world),{
+				var ent = new FPhysicsEntity(cast(this.world),{
 					sprite: Assets.getBitmapData("assets/AlienBlood.png")
 					,type:"dynamic"
 					,objType: "Shrapnel"

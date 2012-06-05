@@ -7,5 +7,5 @@ sphinx/.DS_Store
 
 
 .sphinx.nmml.swp
-
+sphinx.build
 .swp
