@@ -1,5 +1,5 @@
 {
-	"className":"org.wambaugh.sphinx.entities.Grunt"
+	"className":"org.wambaugh.sphinx.entities.Queen"
 	,"sprite":"assets/ModerateWall.png"
 	,"type": "dynamic"
 	,"imageScale": 589
