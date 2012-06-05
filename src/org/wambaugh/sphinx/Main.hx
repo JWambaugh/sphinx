@@ -10,16 +10,7 @@ import nme.display.StageAlign;
 import nme.display.StageScaleMode;
 import nme.Lib;
 import nme.utils.WeakRef;
-import org.wambaugh.sphinx.draw.DrawCanvas;
-import org.wambaugh.sphinx.entities.Grunt;
-import org.wambaugh.sphinx.map.Background;
-import org.wambaugh.sphinx.map.Ground;
-import org.wambaugh.sphinx.map.ModerateForceField;
-import org.wambaugh.sphinx.map.ModerateWall;
-import org.wambaugh.sphinx.map.StrongWall;
-import org.wambaugh.sphinx.map.StrongForceField;
-import org.wambaugh.sphinx.map.WeakForceField;
-import org.wambaugh.sphinx.map.WeakWall;
+
 import nme.display.Sprite;
 import nme.display.Bitmap;
 import nme.text.TextField;
@@ -29,6 +20,19 @@ import nme.events.Event;
 import firmament.utils.FAutoCrop;
 import firmament.utils.loader.FEntityLoader;
 
+
+//all entities must be imported somewhere to be compiled
+import org.wambaugh.sphinx.draw.DrawCanvas;
+import org.wambaugh.sphinx.entities.Grunt;
+import org.wambaugh.sphinx.entities.Queen;
+import org.wambaugh.sphinx.map.Background;
+import org.wambaugh.sphinx.map.Ground;
+import org.wambaugh.sphinx.map.ModerateForceField;
+import org.wambaugh.sphinx.map.ModerateWall;
+import org.wambaugh.sphinx.map.StrongWall;
+import org.wambaugh.sphinx.map.StrongForceField;
+import org.wambaugh.sphinx.map.WeakForceField;
+import org.wambaugh.sphinx.map.WeakWall;
 
 /**
  * ...

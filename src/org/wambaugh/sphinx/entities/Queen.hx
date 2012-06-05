@@ -19,14 +19,15 @@ class Queen extends BadGuy
 		health = 200;
 	}
 	override public function takeDamage() {
-		if (this.health < 200 && this.health > 0) {
+		if (dead) return;
+		if (this.health < 100 && this.health > 0) {
 			for (count in 1 ... 3) {
 				var thisY = this.getPositionY() + (Math.random() * .5) - .2;
 				var thisX = this.getPositionX() + (Math.random() * .5) - .2;
-				var grunt= FEntityLoader.getInstance().loadEntity('assets/grunt.json',world,{position:new FVector (thisX,thisY)});
+				var grunt= FEntityLoader.getInstance().loadEntity('assets/entities/grunt.json',world,{position:new FVector (thisX,thisY)});
 			}
 		}
-		if (dead) return;
+		
 		if (this.health <= 0) {
 			
 			for ( count in 1 ... 10) {
