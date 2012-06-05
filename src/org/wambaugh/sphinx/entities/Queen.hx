@@ -4,7 +4,7 @@ import firmament.core.FVector;
 import nme.display.Bitmap;
 import nme.Assets;
 import firmament.core.FPhysicsEntity;
-import Grunt;
+import firmament.utils.loader.FEntityLoader;
 /**
  * ...
  * @author Gunnar Wambaugh
@@ -13,20 +13,17 @@ import Grunt;
 class Queen extends BadGuy
 {
 
-	public function new() 
+	public function new(world:FPhysicsWorld,config:Dynamic) 
 	{
 		super(world, config);
-		health = 30;
+		health = 200;
 	}
 	override public function takeDamage() {
-		if (this.health < 30 && this.health > 0) {
+		if (this.health < 200 && this.health > 0) {
 			for (count in 1 ... 3) {
-				var rrandomY = this.getPositionY() + (Math.random() * .5) - .2;
-				var rrandomX = this.getPositionX() + (Math.random() * .5) - .2;
-				var entt = new FPhysicsEntity(cast(world),{
-				 Grunt)
-				 position: new FVector (rrandomX,rrandomY)
-				});
+				var thisY = this.getPositionY() + (Math.random() * .5) - .2;
+				var thisX = this.getPositionX() + (Math.random() * .5) - .2;
+				var grunt= FEntityLoader.getInstance().loadEntity('assets/grunt.json',world,{position:new FVector (thisX,thisY)});
 			}
 		}
 		if (dead) return;
