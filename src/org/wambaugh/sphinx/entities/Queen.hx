@@ -16,11 +16,13 @@ class Queen extends BadGuy
 	public function new(world:FPhysicsWorld,config:Dynamic) 
 	{
 		super(world, config);
-		health = 200;
+		health = 30;
 	}
 	override public function takeDamage() {
-		if (dead) return;
-		if (this.health < 100 && this.health > 0) {
+		if (dead) {
+			return;
+		}
+		if (this.health < 30 && this.health > 0) {
 			for (count in 1 ... 3) {
 				trace('spawning');
 				var thisY = this.getPositionY() + (Math.random() * .5) - .2;
